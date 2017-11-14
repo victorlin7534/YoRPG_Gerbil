@@ -10,14 +10,4 @@ public class Troll extends Monster {
 
 	return description;
     }
-        public void specialize(){
-	defense /= 2;
-	attack *= 2;
-    }
-    
-    //resets stats
-    public void normalize(){
-	defense = 20
-	attack = 1;
-    }
 } 

@@ -10,15 +10,4 @@ public class Hydra extends Monster {
 
 	return description;
     }
-
-        public void specialize(){
-	defense /= 2;
-	attack *= 2;
-    }
-    
-    //resets stats
-    public void normalize(){
-	defense = 50;
-	attack = 1;
-    }
 }

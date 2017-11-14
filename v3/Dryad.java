@@ -12,14 +12,4 @@ public class Dryad extends Protagonist {
 	return description;
 
     }
-    public void specialize(){
-	defense /= 2;
-	attack *= 2;
-    }
-    
-    public void normalize(){
-	defense = 35;
-	attack = 2;
-    }
-
 }

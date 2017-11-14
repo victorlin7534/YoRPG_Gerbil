@@ -16,16 +16,5 @@ public class Healer extends Protagonist {
 
 	return description;
     }
-
-    public void specialize(){
-	defense /= 2;
-	attack *= 2;
-    }
-    
-    //resets stats
-    public void normalize(){
-	defense = 25;
-	attack = 2;
-    }
 }
 
