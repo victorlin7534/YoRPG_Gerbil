@@ -4,10 +4,10 @@
 //2017-11-10
 
 public class Character{
-    public static int HP;
-    private static int strength;
-    public static int defense;
-    public static double attack;
+    protected static int HP;
+    protected static int strength;
+    protected static int defense;
+    protected static double attack;
 
     public boolean isAlive(){
 	return HP > 0;
@@ -26,5 +26,15 @@ public class Character{
 	x.lowerHP(pain);
 	return pain;
     }
+    
+    public String toString() {
+        String s = "";
+        
+        s += "hitpoints: " + HP;
+        s += "strength: " + strength;
+	s += "defense: " + defense;
+        s += "attack: " + attack;
+        return s;
+    } //end toString                                                            
 
 }
