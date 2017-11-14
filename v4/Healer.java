@@ -10,7 +10,7 @@ public class Healer extends Protagonist {
 	name = input;
     } 
 	
-    public static String about() {
+    public String about() {
 	String description;
 	description = "The Healer channels her inner energy in order to help her companions survive. Enjoy an increased health boost for longetivity, as well as the ability to heal her teammates! (Don't tell her that her skill has not been unlocked, though.)";
 
