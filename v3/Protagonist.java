@@ -4,7 +4,7 @@
 //2017-11-10
 
 public class Protagonist extends Character{
-    private String name;
+    protected String name;
 
 
     //CONSTRUCTORS

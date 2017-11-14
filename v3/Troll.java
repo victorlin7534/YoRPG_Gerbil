@@ -1,16 +1,13 @@
 public class Troll extends Monster {
-    private static String name; 
-    private static int strength;
-    private static double attack;
 
-    public Troll{
-	strength = 100;
-	attack = 2.0; 
+    public Troll(){
+	HP = 1000;
     } 
 	
-    public String toString() {
-	System.put.println("name: " + name);
-	System.put.println("strength: " + strength);
-	System.put.println("attack: " + attack); 
+    public static String about() {
+	String description;
+	description = "Every player's nightmare, the troll hides under the bridge, waiting for a billy goat to clop over. His high hitpoints make him impossible to beat. Best of luck if you happen to meet him!";
+
+	return description;
     } 
 } 

@@ -1,19 +1,13 @@
 public class Hydra extends Monster {
-    private static String name; 
-    private static int strength;
-    private static double attack;
 
-    public Hydra{
-	strength = 150;
-	attack = 1.5; 
+    public Hydra(){
+	defense = 50;
     } 
-	
-    public String toString() {
-	System.put.println("name: " + name);
-	System.put.println("strength: " + strength);
-	System.put.println("attack: " + attack); 
+
+    public static String about(){
+	String description;
+	description = "The Hydra, with its many heads and tough scales, has been an insurmountable obstacle for many. Having only been defeated by Hercules, the Hydra are on the prowl for their next meal.";
+
+	return description;
     } 
-    
-    public String toString() {
-    } 
-} 
+}

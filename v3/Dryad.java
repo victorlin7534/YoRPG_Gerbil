@@ -1,16 +1,16 @@
 public class Dryad extends Protagonist {
-    private static String name; 
-    private static int strength;
-    private static double attack;
 
-    public Dryad{
-	strength = 150;
-	attack = 1.5; 
-    } 
+    public Dryad(String input){
+	defense = 35;
+	name = input;
 	
-    public String toString() {
-	System.put.println("name: " + name);
-	System.put.println("strength: " + strength);
-	System.put.println("attack: " + attack); 
     } 
-} 
+    public static String about(){
+	String description;
+	description = "The Dryad invokes the power of nature to infuse her skin with the toughened elements of the trees around her. Her defense is naturally increased with bark armor, and her AOE boosts the defense of her companions.";
+
+	return description;
+
+    } 
+
+}

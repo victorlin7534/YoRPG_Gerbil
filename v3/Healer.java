@@ -1,16 +1,19 @@
-public class Healer extends Protagonist {
-    private static String name; 
-    private static int strength;
-    private static double attack;
+//Team Gerbil: Susan Lin, Victor Lin, Maggie Zhao                              
+//APCS1 pd02                                                                   
+//HW #31: Ye Olde Role Playing Game, Expanded                                  
+//2017-11-13  
 
-    public Hydra{
-	strength = 120;
-	attack = 1.4; 
+public class Healer extends Protagonist {
+
+    public Healer(String input){
+	HP =  500;
+	name = input;
     } 
 	
-    public String toString() {
-	System.put.println("name: " + name);
-	System.put.println("strength: " + strength);
-	System.put.println("attack: " + attack); 
+    public static String about() {
+	String description;
+	description = "The Healer channels her inner energy in order to help her companions survive. Enjoy an increased health boost for longetivity, as well as the ability to heal her teammates! (Don't tell her that her skill has not been unlocked, though.)";
+
+	return description;
     } 
 } 

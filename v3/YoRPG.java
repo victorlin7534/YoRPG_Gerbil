@@ -1,7 +1,7 @@
-//Team gerbil: Susan Lin, Victor Lin, Maggie Zhao
+//Team Gerbil: Susan Lin, Victor Lin, Maggie Zhao
 //APCS1 pd02
-//HW27 Ye Olde Role Playing Game
-//2017-11-09
+//HW #31: Ye Olde Role Playing Game, Expanded
+//2017-11-13
 
 /**********************************************
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
@@ -27,7 +27,8 @@ public class YoRPG
   private int moveCount;
   private boolean gameOver;
   private int difficulty;
-
+  private int playerType;
+    
   private InputStreamReader isr;
   private BufferedReader in;
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,8 +80,34 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
+    // Character initialization
+    s = name + ", what would you like to be?";
+    s += "\n\t 1- Healer";
+    s += "\n\t 2- Dryad";
+    s += "\n\t 3- Warrior";
+
+    System.out.println(s);
+
+    
+    try {
+	playerType = Integer.parseInt( in.readLine() );
+    }
+    catch ( IOException e ) { }
+
+    
+    if (playerType == 1) {
+	Protagonist pat = new Healer ( name );
+    }
+    else if (playerType == 2) {
+	Protagonist pat = new Dryad ( name );
+    }
+    else if (playerType == 3) {
+	Protagonist pat = new Warrior ( name );
+    }
+   
+    
     //instantiate the player's character
-    pat = new Protagonist( name );
+    // pat = new playerType( name );
 
   }//end newGame()
 
