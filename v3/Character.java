@@ -10,7 +10,7 @@ public class Character{
     protected static double attack;
 
     public boolean isAlive(){
-	return HP > 0;
+	return (HP > 0);
     }
 
     public int getDefense(){
@@ -26,15 +26,5 @@ public class Character{
 	x.lowerHP(pain);
 	return pain;
     }
-    
-    public String toString() {
-        String s = "";
-        
-        s += "hitpoints: " + HP;
-        s += "strength: " + strength;
-	s += "defense: " + defense;
-        s += "attack: " + attack;
-        return s;
-    } //end toString                                                            
 
 }

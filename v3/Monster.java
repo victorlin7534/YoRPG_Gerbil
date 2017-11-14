@@ -6,7 +6,7 @@
 public class Monster extends Character{
 	
     public Monster(){
-	strength = (int)(Math.random() * (45)) + 20;
+	strength = (int)((Math.random() * (45)) + 20);
 	HP = 150;
 	defense = 20;
 	attack = 1.0;
