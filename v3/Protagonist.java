@@ -5,15 +5,22 @@
 
 public class Protagonist extends Character{
     private String name;
-	
-    public Protagonist(String input){
-	name = input;
+
+
+    //CONSTRUCTORS
+    public Protagonist(){
 	HP = 400;
 	strength = 45;
 	defense = 25;
 	attack = 2;
     }
-	
+
+    public Protagonist(String input) {
+	this();
+	name = input;
+    }
+
+    
     public String getName(){
 	return name;
     }
