@@ -96,13 +96,13 @@ public class YoRPG
 
     
     if (playerType == 1) {
-	Protagonist pat = new Healer ( name );
+	pat = new Healer ( name );
     }
     else if (playerType == 2) {
-	Protagonist pat = new Dryad ( name );
+	pat = new Dryad ( name );
     }
     else if (playerType == 3) {
-	Protagonist pat = new Warrior ( name );
+	pat = new Warrior ( name );
     }
    
     
