@@ -11,5 +11,16 @@ public class Warrior extends Protagonist {
 	description = "The Warrior hails from the harshest Siberian frostlands, where his great power has made him a legend among his townspeople. When enraged, he utilizes his increased strength and attack for the greater good.";
 
 	return description;
-    } 
+    }
+
+    public void specialize(){
+	defense /= 2;
+	attack *= 2;
+    }
+    
+    //resets stats
+    public void normalize(){
+	defense = 25;
+	attack = 1.75;
+    }
 } 

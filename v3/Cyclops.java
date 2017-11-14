@@ -11,5 +11,15 @@ public class Cyclops extends Monster {
 
 	return description;
 	
-    } 
+    }
+
+    public void specialize(){
+	defense /= 2;
+	attack *= 2;
+    }
+    
+    public void normalize(){
+	defense = 125;
+	attack = 1.25;
+    }
 } 

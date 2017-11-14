@@ -9,5 +9,16 @@ public class Hydra extends Monster {
 	description = "The Hydra, with its many heads and tough scales, has been an insurmountable obstacle for many. Having only been defeated by Hercules, the Hydra are on the prowl for their next meal.";
 
 	return description;
-    } 
+    }
+
+        public void specialize(){
+	defense /= 2;
+	attack *= 2;
+    }
+    
+    //resets stats
+    public void normalize(){
+	defense = 50;
+	attack = 1;
+    }
 }

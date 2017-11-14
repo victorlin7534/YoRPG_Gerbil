@@ -15,5 +15,17 @@ public class Healer extends Protagonist {
 	description = "The Healer channels her inner energy in order to help her companions survive. Enjoy an increased health boost for longetivity, as well as the ability to heal her teammates! (Don't tell her that her skill has not been unlocked, though.)";
 
 	return description;
-    } 
-} 
+    }
+
+    public void specialize(){
+	defense /= 2;
+	attack *= 2;
+    }
+    
+    //resets stats
+    public void normalize(){
+	defense = 25;
+	attack = 2;
+    }
+}
+
