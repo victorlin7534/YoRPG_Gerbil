@@ -1,6 +1,14 @@
 # YoRPG_Gerbil
 APCS1 pd02
 Victor Lin, Susan Lin, Maggie Zhao
+
+## Agenda
+	*- special moves
+	*- different monsters
+	*- rebalancing monsters/characters
+	*- chat
+	*- final boss
+
 ## YoRPG Class
  * Driver file for Ye Olde Role Playing Game, courtesy of Mr. Brown
  * Simulates monster encounters of a wandering adventurer.
