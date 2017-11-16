@@ -26,6 +26,8 @@ public class YoRPG
     
   private InputStreamReader isr;
   private BufferedReader in;
+  
+  private boolean bossthere = false;
   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -134,21 +136,26 @@ public class YoRPG
 	    System.out.println( "\nNothing to see here. Move along!" );
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
-	
-	//generates a random monster
-	int monsters = ((int)(Math.random() * 2)) + 1;
-	if (monsters == 1){
-	    smaug = new Troll();
-		System.out.println("\tYou have encountered a Troll");
-	}
-	if (monsters == 2){
-	    smaug = new Cyclops();
-		System.out.println("\tYou have encountered a Cyclops");
-	}
-	if (monsters == 3){
-	    smaug = new Hydra();
-		System.out.println("\tYou have encountered a Hydra");
-	}
+		if(bossthere){
+			smaug = new Finalboss();
+			System.out.println("\tYou have encountered the final boss");
+		}
+		else{
+			//generates a random monster
+			int monsters = ((int)(Math.random() * 2)) + 1;
+			if (monsters == 1){
+				smaug = new Troll();
+				System.out.println("\tYou have encountered a Troll");
+			}
+			if (monsters == 2){
+				smaug = new Cyclops();
+				System.out.println("\tYou have encountered a Cyclops");
+			}
+			if (monsters == 3){
+				smaug = new Hydra();
+				System.out.println("\tYou have encountered a Hydra");
+			}
+		}
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -162,11 +169,13 @@ public class YoRPG
         }
         catch ( IOException e ) { }
 
-        if ( i == 2 )
-          pat.specialize();
-        if (i == 1)
+        if ( i == 1 ){
           pat.normalize();
-		if (i == 3)
+		}
+        else if (i == 2){
+          pat.specialize();
+		}
+		else if (i == 3){
 			System.out.println("Type in what you want to yell: ");
 			try{
 				String x = in.readLine();
@@ -175,6 +184,7 @@ public class YoRPG
 				System.out.println("================");
 			}
 			catch(IOException e) {}
+		}
 
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
@@ -222,9 +232,12 @@ public class YoRPG
 
     int encounters = 0;
 
-    while( encounters < MAX_ENCOUNTERS ) {
+    while( encounters <= MAX_ENCOUNTERS ) {
 		if ( game.playTurn() ){
 			encounters++;
+			if(encounters == MAX_ENCOUNTERS){
+				game.bossthere = true;
+			}
 		}else{
 			break;
 		}

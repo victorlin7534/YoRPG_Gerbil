@@ -1,7 +1,7 @@
 public class Troll extends Monster {
 
     public Troll(){
-	HP = 4500;
+	HP = 2500;
     } 
 	
     public static String about() {
