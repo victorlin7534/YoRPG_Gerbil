@@ -70,3 +70,25 @@ Victor Lin, Susan Lin, Maggie Zhao
 	* **increase attack:** increases damage dealt
   * about() method:
      * **Lore:** The Warrior hails from the harshest Siberian frostlands, where his great power has made him a legend among his townspeople. When enraged, he utilizes his increased strength and attack for the greater good.
+
+## Instructions
+	** Assuming you have compiled the code and are currently running the class
+	1) Choose your difficulty(difficulty increases with increasing order):	
+			1 - Easy 
+			2 - Not so easy
+			3 - Beowulf hath nothing on me. Bring it on.
+	2) Enter your desired name for the protagonist. (e.g. Joe)
+	3) Choose your class(see class description for more details):
+			1 - Healer
+			2 - Dryad
+			3 - Warrior
+		You will see the lore of the class you have chosen.
+	4) You will proceed to encounter a monster and are given a selection of moves:
+			1 - Nay. (attack normally)
+			2 - Aye! (use special ability)
+			3 - Talk** (prompts user for text which will be printed in chat box)
+	5) If 1 or 2 were chosen in the previous step, the interface will display the damage dealt by your character as well as the appropriate attack description. The damage dealt by the monster is also displayed
+	6) Repeats steps 4 and 5 until either entity has died. If you die, the game is over, otherwise the game moves on to a different monster. 
+	** Monsters drop currency which you can use to buy weapons in the shop. (back to step 6)
+	** If protagonist has enough currency, he/she is automatically revived at the cost of currency. (back to step 6)
+	** The game ends after you have defeated the final boss
