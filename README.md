@@ -8,7 +8,7 @@ Victor Lin, Susan Lin, Maggie Zhao
 	- rebalancing monsters/characters
 	- chat
 	- final boss
-	- currency/shop
+	- currency for respawning/shop
 
 ## YoRPG Class
  * Driver file for Ye Olde Role Playing Game, courtesy of Mr. Brown
