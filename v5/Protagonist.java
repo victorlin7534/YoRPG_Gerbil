@@ -5,6 +5,7 @@
 
 public abstract class Protagonist extends Character{
     protected String name;
+    protected int currency; 
 
 
     //CONSTRUCTORS
@@ -13,6 +14,7 @@ public abstract class Protagonist extends Character{
 	strength = 45;
 	defense = 25;
 	attack = 1;
+	currency = 0; 
     }
 
     public Protagonist(String input) {
@@ -24,6 +26,20 @@ public abstract class Protagonist extends Character{
     public String getName(){
 	return name;
     }
+
+    public int getMoneys() {
+	return currency; 
+    }
+
+    public void addMoneys() {
+	currency += 100; 
+    }
+    public void loseMoneys() {
+	if (currency >= 0 && currency <= 100)
+	    {currency -= currency;} 
+	else if (currency > 100)
+	    {currency -= 100;} 
+    } 
     
     // Attack Method
     public int attack(Monster x){
