@@ -1,8 +1,8 @@
 public class Cyclops extends Monster {
 
     public Cyclops(){
-	strength = 125;
-	attack = 1.25; 
+	strength = 50;
+	attack = 1.5; 
     } 
 	
     public static String about(){

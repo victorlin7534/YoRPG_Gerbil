@@ -15,8 +15,8 @@ public class Dryad extends Protagonist {
 
     //changes stats
     public void specialize(){
-	defense /= 2;
-	attack *= 2;
+		defense += 15;
+		System.out.println("\tYou have strengthened your defense");
     }
     
     //resets stats

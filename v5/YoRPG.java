@@ -1,8 +1,3 @@
-//Team Gerbil: Susan Lin, Victor Lin, Maggie Zhao
-//APCS1 pd02
-//HW #31: Ye Olde Role Playing Game, Expanded
-//2017-11-13
-
 /**********************************************
  * class YoRPG -- Driver file for Ye Olde Role Playing Game.
  * Simulates monster encounters of a wandering adventurer.
@@ -18,7 +13,7 @@ public class YoRPG
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
 
   //change this constant to set number of encounters in a game
-  public final static int MAX_ENCOUNTERS = 5;
+  public final static int MAX_ENCOUNTERS = 10;
 
   //each round, a Protagonist and a Monster will be instantiated...
   private Protagonist pat;   //Is it man or woman?
@@ -96,13 +91,25 @@ public class YoRPG
 
     
     if (playerType == 1) {
-	pat = new Healer ( name );
+		pat = new Healer ( name );
+		System.out.println("\tYou've selected the healer");
+		System.out.println("==============Class stats================");
+		System.out.println(pat.about());
+		System.out.println("=========================================");
     }
     else if (playerType == 2) {
-	pat = new Dryad ( name );
+		pat = new Dryad ( name );
+		System.out.println("\tYou've selected the dryad");
+		System.out.println("==============Class stats================");
+		System.out.println(pat.about());
+		System.out.println("=========================================");
     }
     else if (playerType == 3) {
-	pat = new Warrior ( name );
+		pat = new Warrior ( name );
+		System.out.println("\tYou've selected the warrior");
+		System.out.println("==============Class stats================");		
+		System.out.println(pat.about());
+		System.out.println("=========================================");
     }
    
     
@@ -127,8 +134,21 @@ public class YoRPG
 	    System.out.println( "\nNothing to see here. Move along!" );
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
-
-	    smaug = new Monster();
+	
+	//generates a random monster
+	int monsters = ((int)(Math.random() * 2)) + 1;
+	if (monsters == 1){
+	    smaug = new Troll();
+		System.out.println("\tYou have encountered a Troll");
+	}
+	if (monsters == 2){
+	    smaug = new Cyclops();
+		System.out.println("\tYou have encountered a Cyclops");
+	}
+	if (monsters == 3){
+	    smaug = new Hydra();
+		System.out.println("\tYou have encountered a Hydra");
+	}
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
@@ -194,10 +214,11 @@ public class YoRPG
     int encounters = 0;
 
     while( encounters < MAX_ENCOUNTERS ) {
-    if ( !game.playTurn() )
-		break;
-    encounters++;
-    System.out.println();
+		if ( game.playTurn() ){
+			encounters++;
+		}else{
+			break;
+		}
     }
 
     System.out.println( "Thy game doth be over." );

@@ -1,8 +1,8 @@
 public class Warrior extends Protagonist {
 
     public Warrior(String input){
-	strength = 175;
-	attack = 1.75;
+	strength = 70;
+	attack = 2;
 	name = input;
     }
 
@@ -13,10 +13,11 @@ public class Warrior extends Protagonist {
 	return description;
     }
 
-    //changes stats
+    //attacks with more force
     public void specialize(){
 	defense /= 2;
-	attack *= 2;
+	attack += 2;
+	System.out.println("\tYou have strengthened your attack");
     }
     
     //resets stats

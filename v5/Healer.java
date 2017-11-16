@@ -1,8 +1,3 @@
-//Team Gerbil: Susan Lin, Victor Lin, Maggie Zhao                              
-//APCS1 pd02                                                                   
-//HW #31: Ye Olde Role Playing Game, Expanded                                  
-//2017-11-13  
-
 public class Healer extends Protagonist {
 
     public Healer(String input){
@@ -17,11 +12,17 @@ public class Healer extends Protagonist {
 	return description;
     }
 
-    //changes stats
+    //heal
     public void specialize(){
-	defense /= 2;
-	attack *= 2;
-    }
+		if(HP < 450){
+			HP += 50;
+			System.out.println("\tYou have healed yourself 50 HP");
+		}
+		else if(HP < 500){
+			HP = 500;
+			System.out.println("\tYou have healed yourself to max health");
+		}
+	}
     
     //resets stats
     public void normalize(){

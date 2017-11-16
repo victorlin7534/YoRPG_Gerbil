@@ -12,7 +12,7 @@ public abstract class Protagonist extends Character{
 	HP = 400;
 	strength = 45;
 	defense = 25;
-	attack = 2;
+	attack = 1;
     }
 
     public Protagonist(String input) {

@@ -1,7 +1,7 @@
 public class Hydra extends Monster {
 
     public Hydra(){
-	defense = 50;
+	defense = 80;
     } 
 
     public static String about(){
