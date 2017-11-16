@@ -215,6 +215,7 @@ public class YoRPG
         System.out.println( "Ye olde self hath expired. You got dead." );
 	if (pat.getMoneys() > 0) {
 	    pat.loseMoneys();
+		pat.HP = 400;
 	    System.out.println("But you gots moneys so now you is not dead. now you is only poorer"); 
 	    return true;
 	} 
