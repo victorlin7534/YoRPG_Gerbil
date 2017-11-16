@@ -157,15 +157,24 @@ public class YoRPG
         // ...but if you get hit, you take more damage.
         try {
           System.out.println( "\nDo you feel lucky?" );
-          System.out.println( "\t1: Nay.\n\t2: Aye!" );
+          System.out.println( "\t1: Nay.\n\t2: Aye!\n\t3: Talk!@%$#");
           i = Integer.parseInt( in.readLine() );
         }
         catch ( IOException e ) { }
 
         if ( i == 2 )
           pat.specialize();
-        else
+        if (i == 1)
           pat.normalize();
+		if (i == 3)
+			System.out.println("Type in what you want to yell: ");
+			try{
+				String x = in.readLine();
+				System.out.println("\t======chat======");
+				System.out.println(x);
+				System.out.println("================");
+			}
+			catch(IOException e) {}
 
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
