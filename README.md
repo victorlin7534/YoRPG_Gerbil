@@ -3,12 +3,12 @@ APCS1 pd02
 Victor Lin, Susan Lin, Maggie Zhao
 
 ## Agenda
-	- special moves
-	- different monsters
-	- rebalancing monsters/characters
-	- chat
-	- final boss
-	- currency for respawning/shop
+	[x]special moves
+	[x]implementation of different monsters
+	[x]rebalancing monsters/characters
+	[x]chat
+	[x]final boss
+	[x]currency for respawning
 
 ## YoRPG Class
  * Driver file for Ye Olde Role Playing Game, courtesy of Mr. Brown
@@ -52,25 +52,33 @@ Victor Lin, Susan Lin, Maggie Zhao
   * getName() accessor- returns the name of the Protagonist
   * specialize() method- halves the defense and doubles the attack, buffing (or debuffing?) the protagonist
   * normalize() method- returns the specialized stats to normal     
-  ###### Healer
+  * getMoneys(), addMoneys(), and loseMoneys() methods to track currency (which is gained by defeating monsters).
+  ###### Healer (Protagonist Subclass)
   * Increased HP
   * specialize() method:
 	* **Heal:** heals the character for 50 HP
   * about() method:
     * **Lore:** The Healer channels her inner energy in order to help her companions survive. Enjoy an increased health boost for longetivity, as well as the ability to heal her teammates! (Don't tell her that her skill has not been unlocked, though.
-  ###### Dryad
+  ###### Dryad (Protagonist Subclass)
   * Increased defense
   * specialize() method:
 	* **increase defense:** increases defense by 15
   * about() method:
     * **Lore:** The Dryad invokes the power of nature to infuse her skin with the toughened elements of the trees around her. Her defense is naturally increased with bark armor, and her AOE boosts the defense of her companions.
-  ###### Warrior
+  ###### Warrior (Protagonist Subclass)
   * Increased strength and attack
   * specialize() method:
 	* **increase attack:** increases damage dealt
   * about() method:
      * **Lore:** The Warrior hails from the harshest Siberian frostlands, where his great power has made him a legend among his townspeople. When enraged, he utilizes his increased strength and attack for the greater good.
 
+## Code Restructuring
+	* Protagonist.java was transformed into an abstract class so that the about(), normalize(), and specialize() methods could be individualized to each of the different subclasses of Protagonist (Healer, Dryad, Warrior).
+	* New currency features (currently, its only purpose is to buy a respawn).
+	* Chat option, where you can talk at the Monster.
+	* After selecting a character, you can read its lore in the terminal.
+	* The type of monster you encounter in the RPG is now randomized.
+	
 ## Instructions
 	** Assuming you have compiled the code and are currently running the class
 	1) Choose your difficulty(difficulty increases with increasing order):	
