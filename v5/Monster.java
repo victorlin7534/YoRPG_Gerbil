@@ -12,18 +12,15 @@ public class Monster extends Character{
 	attack = 1.0;
     }
 
-
     //calculates damage dealt
     //parameter: protagonist object
     public int attack(Protagonist x){
 	int pain = (int)((strength * attack) - x.defense);
 
-	if (pain < 0){
+	if (pain < 0)
 	    pain = 0;
-	}
-	
+
 	x.lowerHP(pain);
 	return pain;
     }
-
 }
